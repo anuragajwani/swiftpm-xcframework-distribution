@@ -1,10 +1,9 @@
-xcodebuild clean build \
-  -project MyFramework.xcodeproj \
+xcodebuild archive \
   -scheme MyFramework \
-  -configuration Release \
-  -sdk iphonesimulator \
-  -derivedDataPath derived_data \
-  BUILD_LIBRARY_FOR_DISTRIBUTION=YES
+  -sdk iphoneos \
+  -archivePath "archives/ios_devices.xcarchive" \
+  BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
+  SKIP_INSTALL=NO
   
 xcodebuild archive \
   -scheme MyFramework \
